@@ -5,35 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wiki Explorer React App</title>
     
-    <!-- FIX: Global Resources loaded in the <head> for immediate availability -->
+    <!-- FIX: 1. Removed Tailwind CDN and configuration scripts. 
+             In a production build, Tailwind must be processed by the build tool (Vite/PostCSS) 
+             to eliminate the large CDN script and optimize CSS.
+    -->
     
-    <!-- 1. Load Bebas Neue Google Font -->
+    <!-- 1. Load Bebas Neue Google Font (This can remain external) -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
     
-    <!-- 2. Load Tailwind CSS CDN Script -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- 3. OPTIONAL: Configure Tailwind (we use the default settings here) -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            // Setting a default font stack that includes the custom font
-            fontFamily: {
-              sans: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-              // Bebas Neue is applied directly via class in the component
-            }
-          }
-        }
-      }
-    </script>
+    <!-- 2. The compiled CSS from Tailwind/Vite will be injected here during the build process. -->
     
   </head>
   <body>
     <!-- The root element where the React app will be mounted -->
     <div id="root"></div>
     
-    <!-- This script is the actual entry point for the bundled application -->
-    <script type="module" src="./src/main.jsx"></script>
+    <!-- This script is the actual entry point for the bundled application. 
+         Vite will replace '/src/main.js' with the correct hashed production file path (e.g., assets/index-hash.js).
+    -->
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
