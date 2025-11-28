@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki Explorer React App</title>
+    
+    <!-- FIX: Global Resources loaded in the <head> for immediate availability -->
+    
+    <!-- 1. Load Bebas Neue Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    
+    <!-- 2. Load Tailwind CSS CDN Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 3. OPTIONAL: Configure Tailwind (we use the default settings here) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            // Setting a default font stack that includes the custom font
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+              // Bebas Neue is applied directly via class in the component
+            }
+          }
+        }
+      }
+    </script>
+    
+    <script type="module" crossorigin src="/assets/index-CZTrtjdw.js"></script>
+  </head>
+  <body>
+    <!-- The root element where the React app will be mounted -->
+    <div id="root"></div>
+    
+    <!-- This script is the actual entry point for the bundled application -->
+  </body>
+</html>
